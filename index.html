@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="klumpers.css">
+    <title>Akkerbouwbedrijf Klumpers</title>
+    <script src="https://kit.fontawesome.com/455ce46c8f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="navBar">
+      <a href="Klumpers.html"><img src="./klumpersImages/farmer.png" alt=""></a>
+          <ul class="navBarLinks">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="overOns.html">Over ons</a></li>
+              <li><a href="gewassen.html">Gewassen</a></li>
+              <li><a href="media.html">Media</a></li>
+          </ul>
+          <button class="hamburger" id="hamburger">
+            <i class="fas fa-bars openMobileNav"></i>
+            <i class="fas fa-times-circle closeMobileNav"></i>
+          </button>
+  </nav>
+  <main>
+          <section class="sectionOne">
+                  <h2>Akkerbouwbedrijf</h2>
+                  <h1>Klumpers</h1>
+          </section>
+          <section class = "sectionUniversal">
+              <div class = "sectionTwoText" >
+                  <h3>Welkom</h3>
+                  <p>Welkom op de site van akkerbouwbedrijf Klumpers! Dit familiebedrijf ligt net buiten het pittoreske Sibculo. 
+                      Het bedrijf wordt gerund door Cor Klumpers, Gea Klumpers & Jarno Klumpers.
+                    Het bedrijf bestaat nu ongeveer 58 jaar en wordt nog steeds generatie op generatie overgedragen. 
+                  </p>
+                  <blockquote> -"Het is geen kunst om boer te worden, maar boer te blijven." </blockquote>
+              </div>
+              <div class="sectionTwoPhoto"></div>
+          </section>
+          <section class = "sectionThree">
+              <div class="maps">
+                  <h3>Ligging</h3>
+                  <div id="map"></div>
+              </div>
+              <div class="weather">
+                  <h3>Actueel weer</h3>
+                  <div class="weatherContainer">
+                    <canvas id="icon" width="128" height="128"></canvas>
+                      <span class="weatherSettings">Temperatuur: <span class="temperature"></span><span> C</span></span>
+                      <span class= "weatherSettings" >Luchtdruk: <span class="pressure"></span></span>
+                      <span class="weatherSettings">WindSnelheid(m/s): <span class="windSpeed"></span></span>
+                      <span class="weatherSettings">Windrichting: <span class="windDirection"></span></span>
+                      <span class= "weatherSettings">Luchtvochtigheid: <span class="humidity"></span></span>
+                  </div>
+              </div>
+              <div class="youTube">
+                  <h3>Wat doen we momenteel:</h3>
+                  <div class="youTubeContainer">
+                    <iframe width="480" height="315" src="https://www.youtube.com/embed/5jFSE2FKrLQ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+              </div>
+          </section>
+  </main>
+  <footer>
+      <div class="contactInfo">
+          <h4>Contact</h4>
+          <p>Tel: 0523-242323</p>
+          <p>Adres: Tachtigbunderweg 4</p>
+          <p>plaats: Sibculo</p>
+      </div>
+      <div class="socialMediaIcons">
+          <a href="https://www.facebook.com/corengea.klumpers" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.youtube.com/c/FarmingActionVideos/videos" target="_blank"><i class="fab fa-youtube"></i></a>
+      </div>
+      <div class="ProgrammerInfo">
+          <p>Powered By: Bart klumpers</p>
+          <p>
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px"
+                    src="http://jigsaw.w3.org/css-validator/images/vcss"
+                    alt="Valide CSS!" />
+            </a>
+        </p>   
+      </div>
+  </footer>
+<script src="klumpers.js"></script>
+<script src="skycons.js"></script>
+<script async
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfy64u1wQOVQDWztbe5Tkt5rzJLL3D_IA&callback=initMap">
+</script>
+</body>
+</html>

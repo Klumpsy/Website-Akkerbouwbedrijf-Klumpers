@@ -1,0 +1,862 @@
+/*--------------------KLUMPERS SITE STYLES (CSS3)------------------------------------*/
+* { 
+/*---------------------------------------------------------------------------*/
+/*Base Styles*/
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+/*---------------------------------------------------------------------------*/
+/*Colors*/ 
+    --clr-main: rgb(175, 184, 99);
+    --clr-accent: rgb(190, 153, 30);
+    --clr-text: white;
+    --clr-background: rgba(1,1,1,0.60);
+/*---------------------------------------------------------------------------*/
+/*Typography */
+font-family: sans-serif;
+}
+
+html { 
+    height: 100%;
+}
+
+body { 
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+    line-height: 1.2;
+    max-width: 1500px;
+    margin: 0 auto; 
+    background-image: url("./klumpersImages/droneFarm.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+/*---------------------------------------------------------------------------*/
+/*Navigation bar*/ 
+.navBar { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 5rem;
+    background: linear-gradient(rgb(53, 77, 51), rgb(31, 46, 36));
+}
+
+.navBar img { 
+    max-width: 80px;
+    margin-left: 10px;
+}
+
+.navBar img:hover {
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+.navBar ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+}
+
+.navBar ul a {
+    margin: 30px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: var(--clr-text);
+}
+
+.navBar ul a:hover { 
+    cursor: pointer;
+    color: var(--clr-main);
+}
+
+.navBar ul a:active { 
+    cursor: pointer;
+    color: var(--clr-main);
+}
+
+.hamburger {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: none;
+    font-size: 1.5rem;
+    overflow: hidden;
+    border: 1px solid var(--clr-accent);
+  }
+
+
+@media only screen and (max-width: 1100px) { 
+    .navBarLinks{
+        position: absolute;
+        right: 0px; 
+        min-width: 200px;
+        top: 8vh;
+        height: 20vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width:30%;
+        background-color: var(--clr-accent);
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        z-index: 10;
+      }
+
+      .navBar ul a{ 
+        color: black;
+      }
+
+      .navBar ul li { 
+        width: 100%;
+        border-bottom: 3px solid black;
+        margin-top: 20px;
+      }
+
+      .navBar ul a:hover{ 
+        color: var(--clr-text);
+      }
+
+      .fa-bars { 
+          color: var(--clr-accent);
+          margin: 8px;
+      }
+    
+      .hamburger {
+        display: block;
+        position: absolute;
+        margin: 20px;
+        margin-left: 85%;
+        background-color: black;
+      }
+
+      .hamburger:hover { 
+          cursor: pointer;
+      }
+
+      .openMobileNav { 
+        transform: translateX(0%);
+      }
+
+      .closeMobileNav { 
+        transform: translateX(100%);
+      }
+}
+/*---------------------------------------------------------------------------*/
+/*Main section*/ 
+/*Top grid layer under navbar HOME PAGE*/
+.sectionOne { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-height: 500px;
+    background-color: var(--clr-background);
+
+}
+.sectionOne h1 { 
+    font-size: 10rem;
+    color: white;
+} 
+.sectionOne h2 { 
+    font-size: 4rem;
+    color: var(--clr-main);
+}
+/*---------------------------------------------------------------------------*/
+/*2nd Grid layer main page*/
+.sectionUniversal { 
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    height: 400px;
+    margin-top: 10px; 
+    background-color: var(--clr-background);
+    color: var(--clr-text);
+}
+
+.sectionTwoText { 
+    grid-area: 1/1/2/2;
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+.sectionTwoText h3 { 
+    font-size: 4rem;
+    color: var(--clr-accent);
+}
+
+.sectionTwoText blockquote { 
+    margin-top: 30px;
+    font-style: italic;
+    font-size: 1.2rem;
+}
+
+.sectionTwoPhoto { 
+    grid-area: 1/2/2/3;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-image: url("./klumpersImages/DroneFarmGreen.jpg");
+}
+/*---------------------------------------------------------------------------*/
+/*Third grid layer Main page (API layer) */ 
+.sectionThree { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 10px;
+    height: 500px;
+}
+
+.sectionThree h3 { 
+    text-align: center;
+    font-size: 1.6rem;
+    color: var(--clr-main);
+    padding: 10px;
+}
+/*---------------------------------------------------------------------------*/
+/*Google Maps display*/ 
+.maps { 
+    background: var(--clr-background);
+}
+
+#map { 
+    width: 90%;
+    height: 85%;
+    margin: 0 auto;
+}
+/*---------------------------------------------------------------------------*/
+/*Weather display*/ 
+.weather { 
+    background: var(--clr-background);
+    margin-left: 10px;
+}
+
+.weatherContainer { 
+    display: flex;
+    height: 80%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+#icon { 
+    margin-bottom: 4rem;
+}
+.weatherSettings { 
+    font-size: 1.2rem;
+    border-bottom: 1px solid var(--clr-accent);
+}
+
+.temperature, .humidity, .pressure, .windSpeed, .windDirection { 
+    color: var(--clr-main);
+    font-size: 1.3rem;
+}
+/*---------------------------------------------------------------------------*/
+/*Youtube display*/ 
+.youTube { 
+    background: var(--clr-background);
+    margin-left: 10px;
+}
+
+.youTubeContainer { 
+    display: flex;
+    justify-content: center;
+    align-self: centerS;
+    width: 100%;
+}
+
+/*---------------------------------------------------------------------------*/
+/*Footer*/ 
+
+footer { 
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 130px;
+    margin-top: auto;
+    background-color: var(--clr-background);
+}
+
+.contactInfo { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+    color: white;
+}
+
+.ProgrammerInfo { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    color: var(--clr-accent);
+}
+
+.ProgrammerInfo p { 
+    padding: 10px;
+}
+
+.socialMediaIcons {
+    display: flex;
+    align-items: center;
+}
+
+.fa-facebook { 
+    margin: 10px;
+    font-size: 40px;
+    color: white;
+}
+
+.fa-youtube { 
+    margin: 10px;
+    font-size: 40px;
+    color: white;
+}
+
+.fa-facebook:hover {
+    color: rgb(71, 71, 182);
+}
+
+.fa-youtube:hover {
+    color: rgb(202, 63, 63);
+}
+
+/*Media Queries Main Page */ 
+
+@media only screen and (max-width: 1000px) { 
+    .sectionUniversal { 
+        grid-template-columns: 1fr;
+        grid-template-rows: 400px 400px;
+    }
+
+    .sectionOne h1{ 
+        font-size: 5rem;
+    }
+
+    .sectionOne h2{ 
+        font-size: 2rem;
+    }
+
+    .sectionTwoPhoto { 
+        grid-area: 2/1/3/2;
+    }
+
+    .sectionThree { 
+        grid-template-columns: 1fr;
+        grid-template-rows: 400px 400px 400px;
+        height: 1600px;
+    }
+
+    .maps { 
+        grid-area: 2/1/3/2;
+        margin: 10px;
+    }
+
+    .weather { 
+        grid-area: 3/1/4/2;
+        margin: 10px;
+    }
+
+    .youTube { 
+        grid-area: 4/1/5/2;
+        margin: 10px;
+    }
+
+    .youTubeContainer { 
+       display: flex;
+       justify-content: center;
+       width: 100%;
+    }
+}
+
+@media only screen and (max-width: 500px) { 
+
+    .sectionUniversal { 
+        grid-template-columns: 1fr;
+        grid-template-rows: 250px 400px;
+    }
+
+    .sectionThree { 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: 250px 400px 400px;
+        height: 1100px;
+        margin-top: 17rem;
+    }
+    #map { 
+        height: 250px;
+    }
+    .sectionOne h1{ 
+        font-size: 3rem;
+    }
+
+    .sectionOne h2{ 
+        font-size: 1.5rem;
+    }
+
+    .sectionTwoText h3 { 
+        font-size: 2rem;
+        text-align: center; 
+    }
+
+    .sectionTwoText p {
+        font-size: 1rem;
+    }
+
+    .sectionTwoText blockquote { 
+        font-size: 0.8rem;
+        margin-top: 8px;
+    }
+
+    footer .socialMediaIcons { 
+        flex-direction: column;
+    }
+
+} 
+
+@media only screen and (max-width: 576px) { 
+    footer { 
+        font-size: 10px;
+    }
+}
+/*---------------------------------------------------------------------------*/
+/* GEWASSEN PAGE */ 
+
+.timelineContainer { 
+    grid-template-columns: 1fr;
+    height: 100%;
+    padding: 2rem; 
+    padding-bottom: 400px;
+    margin-bottom: 10px;
+    background-color: var(--clr-background);
+    color: white;
+}
+
+.topSection { 
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.timeline { 
+    position: relative;
+    min-height: 150px;
+}
+
+.line { 
+    position: absolute;
+    z-index: 2;
+    left: calc(50% - 1px);
+    width: 2px;
+    top: -50px; 
+    bottom: 50px; 
+    background-color: var(--clr-accent);
+    display: none;
+}
+
+.line:before,
+.line:after{ 
+    position: absolute; 
+    display: block;
+    content: "";
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    background-color: var(--clr-accent);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.line:after{ 
+    bottom: 0; 
+}
+
+.infoSection { 
+    display: flex;
+    opacity: 0;
+    transform: translateX(-100%); 
+    transition: 600ms ease;
+    position: relative;
+    z-index: 1; 
+    margin: 50px 0;
+    padding: 1rem;
+    border-radius: 1rem;
+    align-items: center;
+    min-height: 300px; 
+}
+
+.infoSection:nth-child(odd){ 
+    flex-direction: row-reverse;
+    transform: translateX(100%);
+
+}
+
+.infoSection img { 
+    margin: 0 auto;
+    max-width: 500px;
+    border: 2px solid var(--clr-accent);
+}
+
+.bulb { 
+    position: absolute;
+    display: block;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    background-color: var(--clr-accent);
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%); 
+}
+
+.content { 
+    width: calc(50% - 2rem); 
+    text-align: center;
+}
+
+.content h2 { 
+    color: var(--clr-main);
+}
+
+.textInfo { 
+    flex-direction: column;
+}
+
+.show-me:nth-child(n){ 
+    transform: none; 
+    opacity: 1;
+}
+
+.topSection h1 { 
+    font-size: 4rem;
+    color: var(--clr-main);
+}
+
+.content button {
+    background-color: var(--clr-accent);
+    padding: 15px;
+    font-size: 1.2rem;
+    border: none;
+    color: white;
+    margin: 10px auto;
+}
+
+.content .infoButton { 
+    background-color: var(--clr-main);
+    color: black;
+    margin-left: 5px;
+}
+
+.content button:hover { 
+    cursor: pointer;
+    transform: scale(0.99);
+}
+
+@media only screen and (max-width: 1300px) { 
+    .infoSection img { 
+        margin: 0 auto;
+        max-width: 300px;
+        border: 2px solid var(--clr-accent);
+    }
+    .topSection h1 { 
+        font-size: 3rem;
+        color: var(--clr-main);
+    }
+}
+
+@media only screen and (max-width: 900px) { 
+    .infoSection img { 
+        margin: 0 auto;
+        max-width: 200px;
+        border: 2px solid var(--clr-accent);
+    }
+    .topSection h1 { 
+        font-size: 2rem;
+        color: var(--clr-main);
+    }
+
+}
+
+@media only screen and (max-width: 650px) { 
+    .topSection h1 { 
+        font-size: 2rem;
+        color: var(--clr-accent);
+    }
+
+    .topSection { 
+        text-align: center;
+        padding: 2rem 0;
+    }
+
+    .infoSection, .infoSection:nth-child(odd) { 
+        display: flex;
+        flex-direction: column;
+        transition: 600ms ease;
+        position: relative;
+        z-index: 1; 
+        margin: 30px 10px;
+        min-height: 300px; 
+        border-bottom: 1px solid var(--clr-accent);
+    }
+
+    .content { 
+        width: calc(100% - 1rem); 
+    }
+
+    .textInfo { 
+        margin-bottom: 10px;
+    }
+
+    .line, .bulb { 
+        transform: translateX(200vw)
+    }
+
+    .timelineContainer { 
+        padding: 2rem; 
+        margin-bottom: 10px;
+    }
+     
+}
+
+/*---------------------------------------------------------------------------*/
+/*MEDIA PAGE*/
+
+.mediaSection {
+    grid-template-columns: 1fr;
+    height: 100%;
+    background-color: var(--clr-background);
+}
+.pictureContainer  {
+    display: grid;
+    grid-template-columns: repeat(12, 8%);
+    grid-template-rows: repeat(10, 10%);
+    grid-gap: 5px;
+    height: 100%;
+   
+}
+.pictureContainer img { 
+    width: 100%;
+    height: 100%;
+}
+
+.pictureOne { 
+    grid-area: 1/1/4/4;
+}
+.pictureTwo { 
+    grid-area: 1/4/3/8
+}
+.pictureThree { 
+    grid-area: 1/8/4/13 
+}
+.pictureFour { 
+    grid-area: 3/4/5/8;
+}
+.pictureFive { 
+    grid-area: 4/1/6/4;
+}
+.pictureSix { 
+    grid-area: 4/8/6/13;
+}
+.pictureSeven { 
+    grid-area: 6/11/9/13;
+}
+.pictureEight { 
+    grid-area: 5/4/8/8; 
+}
+.pictureNine { 
+    grid-area: 6/1/9/4;
+}
+.pictureTen { 
+    grid-area: 6/8/9/11;
+}
+.pictureEleven { 
+    grid-area: 9/1/11/4;
+}
+.pictureTwelf{ 
+    grid-area: 9/8/11/11;
+}
+.pictureThirteen { 
+    grid-area: 9/11/11/13;
+}
+.pictureFourteen { 
+    grid-area: 8/4/11/8
+}
+
+@media only screen and (max-width: 1100px)  { 
+
+    .mediaSection {
+        height: 100%;
+        margin-bottom: 10px;
+    }
+
+    .pictureContainer img { 
+        width: 100%;
+       
+    }
+    .pictureContainer  {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: auto;
+        grid-gap: 5px;
+        height: 100%;
+        grid-template-areas:
+        "pictureOne pictureSeven"
+        "pictureOne pictureSeven"
+        "pictureThree pictureSeven"
+        "pictureFour pictureFour"
+        "pictureFive pictureSix"
+        "pictureTwo pictureTwo"
+        "pictureEight pictureEight"
+        "pictureNine pictureTen"
+        "pictureEleven pictureTwelf"
+        "pictureThirteen pictureFourteen";
+    }
+
+    .pictureOne { 
+        grid-area: pictureOne;
+    }
+    .pictureTwo { 
+        grid-area: pictureTwo;
+    }
+    .pictureThree { 
+        grid-area: pictureThree;
+    }
+    .pictureFour { 
+        grid-area: pictureFour;
+    }
+    .pictureFive { 
+        grid-area: pictureFive;
+    }
+    .pictureSix { 
+        grid-area: pictureSix;
+    }
+    .pictureSeven { 
+        grid-area: pictureSeven;
+    }
+    .pictureEight { 
+        grid-area: pictureEight; 
+    }
+    .pictureNine { 
+        grid-area: pictureNine;
+    }
+    .pictureTen { 
+        grid-area: pictureTen;
+    }
+    .pictureEleven { 
+        grid-area: pictureEleven;
+    }
+    .pictureTwelf{ 
+        grid-area: pictureTwelf;
+    }
+    .pictureThirteen { 
+        grid-area: pictureThirteen;
+    }
+    .pictureFourteen { 
+        grid-area: pictureFourteen;
+    }
+ 
+}
+
+@media only screen and (max-width: 500px) { 
+    .pictureContainer  {
+        display: grid;
+        grid-template-columns: repeat(1, 100%);
+        grid-template-rows: auto;
+        grid-gap: 5px;
+        height: 100%;
+        grid-template-areas:
+        "pictureOne"
+        "pictureTwo"
+        "pictureThree"
+        "pictureFour"
+        "pictureFive"
+        "pictureSix"
+        "pictureSeven"
+        "pictureEight"
+        "pictureNine"
+        "pictureTen"
+        "pictureEleven"
+        "pictureTwelf"
+        "pictureThirteen"
+        "pictureFourteen"  
+    }
+}
+
+/*---------------------------------------------------------------------------*/
+/* OVER ONS */ 
+
+.photoCor { 
+    background-image: url("./klumpersImages/cor.jpg");
+}
+
+.photoJarno { 
+    background-image: url("./klumpersImages//jarno.jpg");
+}
+
+.photoGea { 
+    grid-area: 1/1/2/2;
+    background-image: url("./klumpersImages/gea.jpg");
+    background-position: center;
+    background-size: cover;
+
+}
+.textGea { 
+    grid-area: 1/2/2/3; 
+    
+}
+
+.sectionJarno { 
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 1290px) { 
+    .sectionCor, .sectionGea, .sectionJarno {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        height: 800px;
+    }
+
+    .textCor, .textGea, .textjarno{ 
+        grid-area: 1/1/2/2;
+
+    }
+
+    .photoCor, .photoGea, .photoJarno { 
+        grid-area: 2/1/3/2;
+    }
+
+}
+
+@media only screen and (max-width: 510px) { 
+    .photoCor { 
+        background-position: 0px 30px;
+        background-repeat: no-repeat;
+    }
+
+}
+
+@media only screen and (max-width: 300px) { 
+    .photoJarno { 
+        background-repeat: no-repeat;
+        background-position: -175px, 50px;
+    }
+}
