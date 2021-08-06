@@ -11,7 +11,7 @@ getWeatherSibculo();
 
 //Weather display 
 async function getWeatherSibculo() { 
-    let apiKey = "19b653f3ac7eadb9a861e23697f93d04"
+    let apiKey = "Your API"
     let lat = 52.4819795;
     let lon = 6.6370606;
     let api = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}`;
